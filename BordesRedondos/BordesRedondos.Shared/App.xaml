@@ -9,6 +9,7 @@
     <Application.Resources>
         
         <viewModel:OptionViewModel x:Key="Options"/>
+        
         <model:Option x:Key="OptionModel"/>
 
         <Style TargetType="Grid" x:Key="grid" >
