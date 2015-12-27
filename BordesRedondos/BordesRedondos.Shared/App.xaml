@@ -2,6 +2,51 @@
     x:Class="BordesRedondos.App"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    xmlns:local="using:BordesRedondos">
+    xmlns:local="using:BordesRedondos"
+    xmlns:model="using:BordesRedondos.Model"
+    xmlns:viewModel="using:BordesRedondos.ViewModel">
+
+    <Application.Resources>
+        
+        <viewModel:OptionViewModel x:Key="Options"/>
+        <model:Option x:Key="OptionModel"/>
+
+        <Style TargetType="Grid" x:Key="grid" >
+            <Setter Property="Background" Value="#FFF3D2" />
+        </Style>
+
+        <DataTemplate x:Key="itemOption">
+
+            <Border 
+                Width="Auto" 
+                Height="Auto" 
+                Margin="5"
+                Background="#199CE3" 
+                CornerRadius="15">
+
+                <StackPanel 
+                    Orientation="Horizontal" 
+                    Height="130" >
+
+                    <Image 
+                        Height="50" 
+                        Width="50" 
+                        Source="Assets/settings.png" 
+                        Stretch="UniformToFill"
+                        Margin="10,0,10,0"/>
+
+                    <TextBlock 
+                        Text="Título" 
+                        Width="350" 
+                        TextTrimming="WordEllipsis"
+                        VerticalAlignment="Center" 
+                        Foreground="White"
+                        FontSize="18"/>
+
+                </StackPanel>
+            </Border>
+        </DataTemplate>
+
+    </Application.Resources>
 
 </Application>
